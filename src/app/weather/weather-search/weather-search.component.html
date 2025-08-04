@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+  <mat-label>Enter City</mat-label>
+  <input matInput [(ngModel)]="city" placeholder="e.g. Delhi" />
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="search()" [disabled]="!city.trim()">
+  Search
+</button>

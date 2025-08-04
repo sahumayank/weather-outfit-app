@@ -1,0 +1,6 @@
+<div *ngIf="weather$ | async as weather">
+  <p>{{ getOutfitAdvice(weather) }}</p>
+</div>
+<div *ngIf="!(weather$ | async)">
+  <p>No weather data available. Please search first.</p>
+</div>
