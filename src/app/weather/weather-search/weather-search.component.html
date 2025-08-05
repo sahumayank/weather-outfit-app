@@ -1,8 +1,12 @@
-<mat-form-field appearance="fill">
-  <mat-label>Enter City</mat-label>
-  <input matInput [(ngModel)]="city" placeholder="e.g. Delhi" />
-</mat-form-field>
+<div class="search-container">
+  <mat-form-field appearance="outline" class="city-input">
+    <mat-label>Enter City Name</mat-label>
+    <input matInput [(ngModel)]="city" placeholder="e.g. Delhi, Mumbai, Bangalore" />
+    <mat-icon matPrefix>location_city</mat-icon>
+  </mat-form-field>
 
-<button mat-raised-button color="primary" (click)="search()" [disabled]="!city.trim()">
-  Search
-</button>
+  <button mat-raised-button color="primary" (click)="search()" [disabled]="!city.trim()" class="search-button">
+    <mat-icon>search</mat-icon>
+    Search Weather
+  </button>
+</div>

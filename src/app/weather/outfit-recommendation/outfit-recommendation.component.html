@@ -1,6 +1,16 @@
-<div *ngIf="weather$ | async as weather">
-  <p>{{ getOutfitAdvice(weather) }}</p>
-</div>
-<div *ngIf="!(weather$ | async)">
-  <p>No weather data available. Please search first.</p>
+<div class="outfit-container" *ngIf="weather$ | async as weather">
+  <div class="outfit-advice">
+    <div class="advice-header">
+      <i class="fas fa-tshirt"></i>
+      <h3>Outfit Recommendation</h3>
+    </div>
+    <div class="advice-content">
+      <p>{{ getOutfitAdvice(weather) }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="!(weather$ | async)" class="no-data">
+    <i class="fas fa-search"></i>
+    <p>No weather data available. Please search for a city first.</p>
+  </div>
 </div>

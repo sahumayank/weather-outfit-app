@@ -7,6 +7,7 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./weather-display.component.scss']
 })
 export class WeatherDisplayComponent {
+  flag=false;
 constructor(private store: Store){}
 
 weather$ = this.store.select((state:any) => state.weather.current);

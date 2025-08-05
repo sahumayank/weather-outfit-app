@@ -1,0 +1,33 @@
+
+.main-content {
+  margin: 0 auto;
+}
+
+.card {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h1.center {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  width: 100%;
+  color: #2d3a4a;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 600px) {
+  h1.center {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+  .card {
+    min-height: 120px;
+    padding: 0.5rem 0.25rem;
+  }
+}

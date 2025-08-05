@@ -1,9 +1,100 @@
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
-  box-sizing: border-box;
-  background: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   min-height: 100vh;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  padding: 3rem 1rem 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08), 0 1.5px 6px 0 rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  transition: box-shadow 0.2s;
+  margin-bottom: 1.5rem;
+  min-width: 0;
+}
+.card:hover {
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.12), 0 3px 12px 0 rgba(0,0,0,0.06);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #2d3a4a;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+button, .btn {
+  background: linear-gradient(90deg, #4f8cff 0%, #38c6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(79,140,255,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #38c6ff 0%, #4f8cff 100%);
+  box-shadow: 0 4px 16px 0 rgba(56,198,255,0.12);
+}
+
+/* Inputs */
+input, select, textarea {
+  border: 1px solid #d1e3f8;
+  border-radius: 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 1rem;
+  background: #f8fbff;
+  transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border: 1.5px solid #4f8cff;
+}
+
+/* Utility classes */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .container {
+    padding: 1rem 0.25rem;
+  }
+  .card {
+    padding: 1.25rem 0.75rem;
+  }
 }

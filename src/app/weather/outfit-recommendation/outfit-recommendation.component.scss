@@ -1,13 +1,94 @@
-// :host {
-//   background: #fff3e0;
-//   padding: 1.5rem;
-//   border-radius: 12px;
-//   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-// }
+.outfit-container {
+  background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
-p {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #bf360c;
-  margin: 0;
+.outfit-advice {
+  .advice-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+
+    i {
+      font-size: 1.8rem;
+      color: #f57c00;
+    }
+
+    h3 {
+      margin: 0;
+      color: #e65100;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  .advice-content {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 1.25rem;
+
+    p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #bf360c;
+      line-height: 1.5;
+    }
+  }
+}
+
+.no-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+
+  i {
+    font-size: 2.5rem;
+    color: #ffb74d;
+  }
+
+  p {
+    margin: 0;
+    color: #f57c00;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .outfit-container {
+    padding: 1rem;
+  }
+
+  .outfit-advice {
+    .advice-header {
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
+    .advice-content p {
+      font-size: 1rem;
+    }
+  }
+
+  .no-data {
+    padding: 1.5rem;
+
+    i {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
 }

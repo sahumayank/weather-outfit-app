@@ -1,4 +1,19 @@
-<h4 >Recent Searches</h4>
-<ul>
-  <li *ngFor="let city of list">{{ city }}</li>
-</ul>
+<div class="history-container" *ngIf="list?.length">
+  <div class="history-header">
+    <i class="fas fa-history"></i>
+    <h4>Recent Searches</h4>
+  </div>
+
+  <div class="history-list">
+    <ul>
+      <li *ngFor="let city of list" class="history-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>{{ city }}</span>
+      </li>
+    </ul>
+  </div>
+
+  <div *ngIf="!list?.length" class="no-history">
+    <p>No recent searches</p>
+  </div>
+</div>
